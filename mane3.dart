@@ -9,10 +9,10 @@ void main() {
   ];
   for (var i in orders) {
     if (i["status"] == "canceled") {
-      break;
+      continue;
     } else if (i["status"] == "vip") {
       print("Please prepare the application now");
-      continue;
+      break;
     }
     switch (i["item"]) {
       case "burger":
@@ -34,5 +34,6 @@ void main() {
     if (i["number"] == 4) {
       print("The order will be very delayed.");
     }
+    print(".....");
   }
 }
